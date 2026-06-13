@@ -3,265 +3,246 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Senior DBA Portfolio - Rijavan Inamdar</title>
+<title>Rijavan Inamdar | Senior Database Administrator</title>
+
 <style>
-:root{
- --primary:#0f172a;
- --secondary:#1e293b;
- --accent:#2563eb;
- --bg:#f8fafc;
- --card:#ffffff;
- --text:#334155;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
-*{margin:0;padding:0;box-sizing:border-box}
+
 body{
-font-family:Segoe UI,Arial,sans-serif;
-background:var(--bg);
-color:var(--text);
-line-height:1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:#f8fafc;
+    color:#334155;
+    line-height:1.6;
 }
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
 .hero{
-background:linear-gradient(135deg,var(--primary),var(--secondary));
-color:#fff;
-padding:60px 30px;
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    color:white;
+    padding:80px 20px;
+    text-align:center;
 }
-.container{max-width:1200px;margin:auto;padding:30px}
-.hero h1{font-size:3rem}
-.hero p{opacity:.9}
-.contact{display:flex;gap:20px;flex-wrap:wrap;margin-top:15px}
-.grid{display:grid;grid-template-columns:2fr 1fr;gap:24px}
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    opacity:0.9;
+}
+
+.contact{
+    margin-top:20px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.hero-buttons{
+    margin-top:30px;
+}
+
+.download-btn{
+    display:inline-block;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:10px;
+    font-weight:600;
+    transition:0.3s;
+    box-shadow:0 5px 15px rgba(37,99,235,0.3);
+}
+
+.download-btn:hover{
+    background:#1d4ed8;
+    transform:translateY(-3px);
+}
+
+.section{
+    padding:50px 0;
+}
+
 .card{
-background:var(--card);
-padding:24px;
-border-radius:16px;
-box-shadow:0 8px 24px rgba(0,0,0,.08);
-margin-bottom:24px;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    margin-bottom:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
 }
-h2{
-color:var(--primary);
-margin-bottom:15px;
-padding-bottom:8px;
-border-bottom:3px solid var(--accent);
+
+.section-title{
+    font-size:1.8rem;
+    color:#0f172a;
+    margin-bottom:20px;
+    border-left:5px solid #2563eb;
+    padding-left:12px;
 }
-ul{padding-left:20px}
-li{margin-bottom:8px}
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
 .skill{
-display:inline-block;
-background:#e0e7ff;
-color:#1e3a8a;
-padding:8px 12px;
-margin:5px;
-border-radius:20px;
-font-size:.9rem;
+    background:#dbeafe;
+    color:#1e40af;
+    padding:8px 15px;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:600;
 }
-.timeline-item{margin-bottom:25px}
-.timeline-item h3{color:var(--secondary)}
-.timeline-item span{color:#64748b;font-size:.9rem}
-table{
-width:100%;
-border-collapse:collapse;
-}
-table th,table td{
-border:1px solid #e2e8f0;
-padding:10px;
-text-align:left;
-}
-table th{
-background:#f1f5f9;
-}
+
 .footer{
-text-align:center;
-padding:30px;
-color:#64748b;
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
 }
-@media(max-width:900px){
-.grid{grid-template-columns:1fr}
-.hero h1{font-size:2rem}
+
+@media(max-width:768px){
+    .hero h1{
+        font-size:2rem;
+    }
+
+    .contact{
+        flex-direction:column;
+        gap:10px;
+    }
 }
 </style>
 </head>
+
 <body>
 
 <section class="hero">
-<div class="container">
-<h1>Rijavan Inamdar</h1>
-<p>Senior Database Administrator | PostgreSQL · MySQL · MongoDB</p>
-<div class="contact">
-<div>📞 Contact Number (as per CV)</div>
-<div>✉ Email Address (as per CV)</div>
-<div>📍 Mumbai, India</div>
-</div>
-</div>
+    <div class="container">
+        <h1>Rijavan Inamdar</h1>
+        <p>Senior Database Administrator | PostgreSQL • MySQL • MongoDB</p>
+
+        <div class="contact">
+            <span>📍 Mumbai, India</span>
+            <span>📧 your-email@example.com</span>
+            <span>📞 +91 XXXXX XXXXX</span>
+        </div>
+
+        <div class="hero-buttons">
+            <a href="./Rijavan_Inamdar_Senior_DBA_CV.docx"
+               download="Rijavan_Inamdar_Senior_DBA_CV.docx"
+               class="download-btn">
+                📄 Download CV
+            </a>
+        </div>
+    </div>
 </section>
 
 <div class="container">
-<div class="grid">
 
-<div>
-<div class="card">
-<h2>Professional Summary</h2>
-<p>
-Results-driven Senior Database Administrator with 7+ years of experience in PostgreSQL (including EDB/EPAS),
-MySQL, and MongoDB administration across enterprise environments. Expertise includes high availability,
-replication, failover, performance tuning, security hardening, backup & recovery, cloud database management,
-automation, and zero-downtime operations across AWS and Google Cloud SQL platforms.
-</p>
-</div>
+    <section class="section">
+        <div class="card">
+            <h2 class="section-title">Professional Summary</h2>
+            <p>
+                Results-driven Senior Database Administrator with 7+ years of
+                experience in PostgreSQL, MySQL, MongoDB, cloud platforms,
+                high availability architecture, replication, performance tuning,
+                backup & recovery, security hardening, and enterprise database
+                operations.
+            </p>
+        </div>
+    </section>
 
-<div class="card">
-<h2>Professional Experience</h2>
+    <section class="section">
+        <div class="card">
+            <h2 class="section-title">Core Technical Skills</h2>
 
-<div class="timeline-item">
-<h3>Database Support IT Operations</h3>
-<span>August XXXX – Present</span>
-<ul>
-<li>Provide expert support for Percona Server for MySQL, PostgreSQL, and MongoDB.</li>
-<li>Diagnose and resolve complex database incidents for enterprise customers.</li>
-<li>Perform root cause analysis using logs and performance metrics.</li>
-<li>Collaborate with R&D and engineering teams on defect resolution.</li>
-<li>Guide customers through installations, patching, upgrades, and production deployments.</li>
-<li>Maintain SLA compliance for Severity 1–3 incidents.</li>
-</ul>
-</div>
+            <div class="skills">
+                <span class="skill">PostgreSQL</span>
+                <span class="skill">EPAS</span>
+                <span class="skill">MySQL</span>
+                <span class="skill">MongoDB</span>
+                <span class="skill">AWS EC2</span>
+                <span class="skill">Google Cloud SQL</span>
+                <span class="skill">PgBouncer</span>
+                <span class="skill">PgPool-II</span>
+                <span class="skill">Repmgr</span>
+                <span class="skill">EFM</span>
+                <span class="skill">Barman</span>
+                <span class="skill">PEM</span>
+                <span class="skill">pgBadger</span>
+                <span class="skill">Veritas</span>
+                <span class="skill">Bash Scripting</span>
+                <span class="skill">ora2pg</span>
+            </div>
+        </div>
+    </section>
 
-<div class="timeline-item">
-<h3>DBA – Core IT (DBA)</h3>
-<span>June XXXX – August XXXX</span>
-<ul>
-<li>Managed PostgreSQL, MySQL, and MongoDB environments with 99.99% availability.</li>
-<li>Implemented CIS and RBI security hardening standards.</li>
-<li>Executed zero-downtime patching and upgrade strategies.</li>
-<li>Administered Google Cloud SQL PostgreSQL and MySQL environments.</li>
-<li>Managed MongoDB Enterprise and Ops Manager deployments.</li>
-<li>Automated health monitoring and reporting using Bash scripting.</li>
-<li>Managed Veritas backups, DR drills, vendor relationships, and junior DBA mentoring.</li>
-</ul>
-</div>
+    <section class="section">
+        <div class="card">
+            <h2 class="section-title">Professional Experience</h2>
 
-<div class="timeline-item">
-<h3>Support Engineer (PostgreSQL / EPAS)</h3>
-<span>December XXXX – May XXXX</span>
-<ul>
-<li>Supported EDB Postgres Advanced Server and PostgreSQL customers globally.</li>
-<li>Resolved replication, backup, upgrade, and performance issues.</li>
-<li>Provided support for EFM, Barman, PEM, PgBouncer, and Repmgr.</li>
-<li>Maintained technical knowledge base documentation.</li>
-<li>Delivered 24×7 support coverage for critical incidents.</li>
-</ul>
-</div>
+            <h3>Database Support IT Operations</h3>
+            <p>Providing enterprise database support for PostgreSQL, MySQL and MongoDB environments.</p>
 
-<div class="timeline-item">
-<h3>Senior Technical Associate – DBA</h3>
-<span>November XXXX – December XXXX</span>
-<ul>
-<li>Managed 50+ PostgreSQL instances across production, UAT, and development.</li>
-<li>Implemented streaming replication, logical replication, and DR solutions.</li>
-<li>Performed major PostgreSQL upgrades and Oracle-to-PostgreSQL migrations.</li>
-<li>Configured PgBouncer, Pgpool-II, Barman, Repmgr, and monitoring solutions.</li>
-<li>Managed MySQL replication, performance tuning, audits, and incident response.</li>
-<li>Upgraded MongoDB environments from 4.0 through 6.0 and administered replica sets and sharded clusters.</li>
-</ul>
-</div>
+            <br>
 
-</div>
+            <h3>DBA – Core IT (DBA)</h3>
+            <p>Managed high-availability environments, cloud databases, DR drills, security hardening, monitoring and automation.</p>
 
-<div class="card">
-<h2>Education</h2>
-<table>
-<tr>
-<th>Qualification</th>
-<th>Institute</th>
-<th>Year</th>
-<th>%</th>
-</tr>
-<tr>
-<td>B.E. Mechanical</td>
-<td>S.I.T's College of Engineering, Yadrav</td>
-<td>2017-18</td>
-<td>65%</td>
-</tr>
-<tr>
-<td>DME</td>
-<td>New Polytechnic, Kolhapur</td>
-<td>2014-15</td>
-<td>75%</td>
-</tr>
-<tr>
-<td>SSC</td>
-<td>S.M.H.S. Savarde B.K.</td>
-<td>2011-12</td>
-<td>87.82%</td>
-</tr>
-</table>
-</div>
-</div>
+            <br>
 
-<div>
-<div class="card">
-<h2>Core Technical Skills</h2>
-<div class="skill">PostgreSQL / EPAS</div>
-<div class="skill">MySQL</div>
-<div class="skill">MongoDB</div>
-<div class="skill">Google Cloud SQL</div>
-<div class="skill">AWS EC2</div>
-<div class="skill">Barman</div>
-<div class="skill">Repmgr</div>
-<div class="skill">EFM</div>
-<div class="skill">Pgpool-II</div>
-<div class="skill">PgBouncer</div>
-<div class="skill">PEM</div>
-<div class="skill">pgBadger</div>
-<div class="skill">pgBench</div>
-<div class="skill">Veritas</div>
-<div class="skill">Bash Scripting</div>
-<div class="skill">ora2pg</div>
-<div class="skill">Oracle FDW</div>
-<div class="skill">Security Hardening</div>
-<div class="skill">PITR</div>
-<div class="skill">HA & DR</div>
-</div>
+            <h3>Support Engineer (PostgreSQL / EPAS)</h3>
+            <p>Supported enterprise PostgreSQL deployments, replication, backup, upgrades and performance tuning.</p>
 
-<div class="card">
-<h2>Certifications</h2>
-<ul>
-<li>EDB Certified Professional – Postgres Advanced Server 13</li>
-<li>EDB Certified Associate – Postgres Advanced Server 13</li>
-<li>EDB Essentials Certification – Postgres Advanced Server 14</li>
-<li>EDB Essentials Certification – Postgres Advanced Server 15</li>
-<li>EDB Essentials Certification – PostgreSQL Advanced Server 16</li>
-</ul>
-</div>
+            <br>
 
-<div class="card">
-<h2>Tools & Products</h2>
-<ul>
-<li><strong>HA / Replication:</strong> EFM, Repmgr, Pgpool-II, EPRS</li>
-<li><strong>Backup:</strong> Barman, Veritas, pg_dump, mongodump</li>
-<li><strong>Monitoring:</strong> PEM, pgBadger, check_mk, Ops Manager</li>
-<li><strong>Performance:</strong> pgBench, PgBouncer, explain/analyse</li>
-<li><strong>Migration:</strong> ora2pg, Oracle FDW, pg_upgrade</li>
-<li><strong>Client Tools:</strong> pgAdmin, PEM, MySQL Workbench, Robo3T</li>
-</ul>
-</div>
+            <h3>Senior Technical Associate – DBA</h3>
+            <p>Managed PostgreSQL, MySQL and MongoDB production environments, migrations and performance optimization.</p>
 
-<div class="card">
-<h2>Additional Information</h2>
-<ul>
-<li>Languages: English, Marathi, Hindi</li>
-<li>Nationality: Indian</li>
-<li>Marital Status: Married</li>
-<li>Notice Period: As per company policy</li>
-<li>Availability: Open to relocation / remote roles</li>
-</ul>
-</div>
-</div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="card">
+            <h2 class="section-title">Certifications</h2>
+            <ul>
+                <li>EDB Certified Professional – Postgres Advanced Server 13</li>
+                <li>EDB Certified Associate – Postgres Advanced Server 13</li>
+                <li>EDB Essentials Certification – Postgres Advanced Server 14</li>
+                <li>EDB Essentials Certification – Postgres Advanced Server 15</li>
+                <li>EDB Essentials Certification – PostgreSQL Advanced Server 16</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="card">
+            <h2 class="section-title">Education</h2>
+
+            <p><strong>B.E. Mechanical Engineering</strong> – Shivaji University</p>
+            <p><strong>Diploma in Mechanical Engineering</strong> – MSBTE</p>
+            <p><strong>SSC</strong> – Maharashtra State Board</p>
+        </div>
+    </section>
 
 </div>
-</div>
 
-<div class="footer">
-Professional Resume Website • Modern Single Page Corporate Portfolio
-</div>
+<footer class="footer">
+    © 2026 Rijavan Inamdar | Senior Database Administrator
+</footer>
 
 </body>
 </html>
