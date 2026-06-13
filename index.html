@@ -106,6 +106,15 @@ body{
     font-weight:600;
 }
 
+.chart-container{
+    display:flex;
+    justify-content:center;
+    margin:30px 0;
+    max-width:500px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
 .footer{
     background:#0f172a;
     color:white;
@@ -123,8 +132,15 @@ body{
         flex-direction:column;
         gap:10px;
     }
+    
+    .chart-container{
+        max-width:320px;
+    }
 }
 </style>
+
+<!-- Chart.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 </head>
 
 <body>
@@ -192,6 +208,34 @@ body{
 
     <section class="section">
         <div class="card">
+            <h2 class="section-title">Experience Distribution</h2>
+            <p style="text-align:center; margin-bottom:20px; color:#475569;">
+                Breakdown of hands-on experience across major database technologies
+            </p>
+            
+            <div class="chart-container">
+                <canvas id="experienceChart" width="400" height="400"></canvas>
+            </div>
+            
+            <div style="display:flex; justify-content:center; gap:30px; flex-wrap:wrap; margin-top:20px; font-size:0.95rem;">
+                <div style="display:flex; align-items:center; gap:8px;">
+                    <div style="width:16px; height:16px; background:#3b82f6; border-radius:50%;"></div>
+                    <span><strong>PostgreSQL</strong> — 50%</span>
+                </div>
+                <div style="display:flex; align-items:center; gap:8px;">
+                    <div style="width:16px; height:16px; background:#10b981; border-radius:50%;"></div>
+                    <span><strong>MySQL</strong> — 30%</span>
+                </div>
+                <div style="display:flex; align-items:center; gap:8px;">
+                    <div style="width:16px; height:16px; background:#f59e0b; border-radius:50%;"></div>
+                    <span><strong>MongoDB</strong> — 20%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="card">
             <h2 class="section-title">Professional Experience</h2>
 
             <h3>Database Support IT Operations</h3>
@@ -243,6 +287,47 @@ body{
 <footer class="footer">
     © 2026 Rijavan Inamdar | Senior Database Administrator
 </footer>
+
+<script>
+// Pie Chart
+document.addEventListener('DOMContentLoaded', function() {
+    const ctx = document.getElementById('experienceChart');
+    
+    new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['PostgreSQL', 'MySQL', 'MongoDB'],
+            datasets: [{
+                data: [50, 30, 20],
+                backgroundColor: [
+                    '#3b82f6',
+                    '#10b981',
+                    '#f59e0b'
+                ],
+                borderColor: '#ffffff',
+                borderWidth: 3,
+                hoverOffset: 15
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            plugins: {
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            return context.label + ': ' + context.raw + '%';
+                        }
+                    }
+                }
+            }
+        }
+    });
+});
+</script>
 
 </body>
 </html>
